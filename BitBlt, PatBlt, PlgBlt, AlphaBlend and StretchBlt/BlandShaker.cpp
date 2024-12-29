@@ -8,10 +8,10 @@ int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1); // I like to put these s
 
 int main() 
 {
-	  HDC hdc; // Handle for device context
+	        HDC hdc; // Handle for device context
 		while (1) { // Loop thing
 		hdc = GetDC(NULL); // Gets the device context
-	  BitBlt(hdc, rand () % 5, rand () % 8, sw, sh, hdc, rand () % 10, rand () % 25, NOTSRCINVERT); // BitBlt 
+	        BitBlt(hdc, rand () % 5, rand () % 8, sw, sh, hdc, rand () % 10, rand () % 25, NOTSRCINVERT); // BitBlt 
 		ReleaseDC(NULL, hdc); // Releases the device context
 		Sleep(10); // Sleep thingy
 	}
